@@ -1,0 +1,168 @@
+Exam: 
+📌 INSTRUCTIONS
+Create ONE single HTML file named index.html
+Use internal or external CSS
+JavaScript is NOT allowed
+Use Google Font, Font-Awesome & Bootstrap
+Do NOT use SVG
+ 
+🔹 TASK-1: CSS Borders & Selectors
+Create four div elements:
+Div 1 → Show top border only (1px solid black)
+Div 2 → Show right border only (2px dashed red)
+Div 3 → Show bottom border only (3px dotted blue)
+Div 4 → Show all borders (different colors)
+👉 Use:
+Element selector
+Class selector
+ID selector
+Universal selector
+ 
+🔹 TASK-2: Hover & Pseudo Classes
+Create a div that:
+Changes color on hover
+Increases size
+Moves position using transform
+Create an anchor tag demonstrating:
+:visited
+:active
+ 
+🔹 TASK-3: Pseudo Elements
+Create a paragraph showing:
+::first-letter
+::first-line
+::before
+::after
+::selection
+(Selected text should have red background & white text)
+ 
+🔹 TASK-4: Display & Position Properties
+Display:
+Show difference between:
+block
+inline
+inline-block
+none
+Position:
+Create elements using:
+relative
+absolute
+fixed
+sticky
+ 
+🔹 TASK-5: Image Hover, Overflow & Visibility
+Create a div with an image:
+Image should zoom on hover
+Use overflow: hidden
+Create 3 images:
+Hide image on hover using visibility: hidden
+Show remaining images normally
+ 
+🔹 TASK-6: List Styles & Cursor Types
+List:
+Create an unordered list using:
+list-style-type
+list-style-position
+list-style-image
+Cursor:
+Create at least 8 divs demonstrating:
+pointer
+move
+wait
+not-allowed
+text
+help
+zoom-in
+zoom-out
+ 
+🔹 TASK-7: Buttons, Colors & Text Styling
+Create a custom button using <div> and CSS
+Create divs with colors using:
+Hex
+RGB
+RGBA
+HSL
+HSLA
+Color name
+Show text with:
+Different font-size
+Different font-family
+font-style
+font-weight
+font-variant
+ 
+🔹 TASK-8: Shadows, Gradients & Units
+Create a div with box-shadow
+Create an h1 with text-shadow
+Create:
+One div with linear gradient
+One div with radial gradient
+Set text size using:
+px
+em
+rem
+mm
+cm
+in
+pt
+ 
+🔹 TASK-9: Flex, Grid & Justify-Content
+Create a section showing:
+display: flex
+display: grid
+(Clearly show difference)
+In flex section demonstrate:
+justify-content: flex-start
+flex-end
+center
+space-between
+space-around
+space-evenly
+ 
+🔹 TASK-10: Animations, Transform & Responsive Design
+Create a div that rotates on hover
+Show all transform properties:
+translate
+rotate
+scale
+skewX
+skewY
+skew
+matrix
+Create animation using:
+keyframes
+transform-origin
+Create a 3D rotating div using:
+rotateX / rotateY
+Create an animated div that:
+Moves across the screen
+Rotates continuously
+Demonstrate:
+transition
+transition-delay
+transition-duration
+transition-property
+transition-timing-function
+Show use of z-index
+ 
+🔹 TASK-11: CSS Columns & Hyphens
+Create text with:
+column-count
+column-width
+column-gap
+Show hyphenation:
+none
+manual
+auto
+ 
+🔹 TASK-12: Responsive Product Section
+Create a Product Card Section with:
+Image
+Product name
+Price
+Button
+Responsive Breakpoints:
+Desktop: 3 products per row
+Tablet: 2 products per row
+Mobile: 1 product per row
+ 

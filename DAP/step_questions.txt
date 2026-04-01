@@ -1,0 +1,287 @@
+================================================================
+  STUDENT PERFORMANCE ANALYSIS — CHAPTER & QUESTION INDEX
+================================================================
+
+DATASET: Student_Performance.csv
+RECORDS: 25,000 (original) → 5,000 (after delete operation)
+COLUMNS: 16 features
+================================================================
+
+CHAPTER 1: PROJECT DEFINITION
+  Content:
+  - Project title and objectives
+  - Dataset overview (25,000 → 5,000 records, 16 columns)
+  - Tools and technologies used
+    (Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn,
+     Sweetviz, YData Profiling)
+
+----------------------------------------------------------------
+
+CHAPTER 2: DATASET DETAILS
+  Content:
+  - Column-wise description table (16 columns)
+  - Data types for each column (Integer / Float / Categorical)
+  - Sample data preview (first 3 rows)
+  Columns Covered:
+    student_id, age, gender, school_type, parent_education,
+    study_hours, attendance_percentage, internet_access,
+    travel_time, extra_activities, study_method,
+    math_score, science_score, english_score,
+    overall_score, final_grade
+
+----------------------------------------------------------------
+
+CHAPTER 3: PYTHON TOOLS AND LIBRARIES USED
+  Content:
+  - Import all required Python libraries
+  - Print version of each library
+  Libraries:
+    pandas, numpy, matplotlib, seaborn, sklearn,
+    sweetviz, ydata_profiling
+
+----------------------------------------------------------------
+
+CHAPTER 4: UNDERSTANDING THE DATA
+  Content:
+  4.1 Loading Data & Creating the Data Frame
+      - pd.read_csv('Student_Performance.csv')
+      - Print dataset shape (rows x columns)
+      - Print column names
+      - Display first record (index 0)
+      - Display top 5 records
+  4.2 Getting Information from Dataframe
+      - dataframe.info() — data types, non-null counts
+      - dataframe.describe() — statistical summary
+      - Unique values in categorical columns
+
+----------------------------------------------------------------
+
+CHAPTER 5: UNDERSTANDING SPREAD OF DATA
+         [Data Cleaning and Preparation]
+  Content:
+  - Remove unnecessary columns (Unnamed: 0)
+  - Convert numeric columns using pd.to_numeric()
+  - DELETE OPERATION:
+      BEFORE DELETE: 25,000 records displayed
+      Condition    : Remove where student_id > 5000
+      Deleted rows : 20,000 records
+      AFTER DELETE :  5,000 records displayed
+  5.1 Checking for Missing Data and Outliers
+      - isnull().sum() — null value check
+      - IQR method outlier detection per column
+      - Boxplot for score columns (outlier visualization)
+
+----------------------------------------------------------------
+
+CHAPTER 6: AUTOMATING EDA USING PYTHON
+  Content:
+  - Sweetviz automated report → sweetviz_report.html
+  - YData Profiling report   → ydata_report.html
+
+----------------------------------------------------------------
+
+CHAPTER 7: HANDLING MISSING DATA AND OUTLIERS
+  Content:
+  - fillna(mean) — fill missing values with column mean
+  - Verify with isnull().sum() before and after filling
+  - Outlier capping using IQR Winsorization method
+
+----------------------------------------------------------------
+
+CHAPTER 8: UNIVARIATE ANALYSIS
+  (Examines ONE variable at a time)
+  Questions:
+
+  Q1: How are overall exam scores distributed?
+      Chart: Histogram with KDE curve
+      Insight: Checks if score distribution is normal,
+               left-skewed, or right-skewed
+
+  Q2: Are there extreme score variations or outliers?
+      Chart: Boxplot (math, science, english, overall scores)
+      Insight: Identifies outlier students with extreme scores
+
+  Q3: Which school type has more students?
+      Chart: Bar chart (public vs private count)
+      Insight: Checks dataset balance between school types
+
+  Q4: What is the most common study method?
+      Chart: Bar chart of study method vs student count
+      Insight: Identifies the most popular study approach
+
+----------------------------------------------------------------
+
+CHAPTER 9: BIVARIATE ANALYSIS
+  (Examines relationship between TWO variables)
+  Questions:
+
+  Q5: How do study hours affect overall exam scores?
+      Chart: Scatter plot with trend line
+      Insight: Correlation between study hours and score
+
+  Q6: Does attendance percentage influence exam scores?
+      Chart: Scatter plot with trend line
+      Insight: Correlation between attendance and score
+
+  Q7: Does school type impact exam scores significantly?
+      Chart: Boxplot (public vs private overall score)
+      Insight: Compares average scores by school type
+
+  Q8: Which parent education level leads to highest scores?
+      Chart: Boxplot (parent education vs score, sorted)
+      Insight: Identifies which family background helps most
+
+  Q11: Is there a relationship between gender and scores?
+       Chart: Countplot (gender distribution) +
+              Boxplot (gender vs score by school type)
+       Insight: Checks gender-based performance differences
+
+----------------------------------------------------------------
+
+CHAPTER 10: MULTIVARIATE ANALYSIS
+  (Examines THREE or more variables simultaneously)
+  Questions:
+
+  Q9: Which study method delivers the best results?
+      Chart: Bar chart (study method vs average score)
+      Insight: Best-performing study method identified
+
+  Q12: What is the correlation between numerical factors?
+       Chart: Heatmap (correlation matrix of all numeric cols)
+       Insight: Strong/weak correlations between features
+
+  Q13: How do study hours and internet access jointly
+       affect scores?
+       Chart: Scatter plot (study hours vs score, hue=internet)
+       Insight: Internet access + study hours combined effect
+
+  BONUS: Gender vs Score by School Type (Multivariate)
+         Chart: Boxplot (gender x school_type x overall_score)
+         Insight: Interaction of gender AND school type on score
+
+----------------------------------------------------------------
+
+CHAPTER 11: REGRESSION ANALYSIS (SUPERVISED LEARNING)
+  Content:
+  - Label Encode categorical columns
+  - Define Features (X) and Target (y = overall_score)
+  - Train-Test Split: 80% train / 20% test (random_state=42)
+  - Model: RandomForestRegressor (n_estimators=100)
+  - Train model on training data
+  Features used:
+    age, gender, school_type, parent_education, study_hours,
+    attendance_percentage, internet_access, travel_time,
+    extra_activities, study_method, math_score, science_score,
+    english_score, final_grade
+
+----------------------------------------------------------------
+
+CHAPTER 12: MODEL EVALUATION
+  Content:
+  Regression Metrics:
+  - MAE  (Mean Absolute Error)    — avg prediction error
+  - MSE  (Mean Squared Error)     — penalises large errors
+  - RMSE (Root Mean Squared Error) — error in score units
+  - R2 Score                       — % variance explained
+
+  Chart: Actual vs Predicted scatter plot
+  (Points on red diagonal = perfect predictions)
+
+  Q10: Which features are most important in predicting scores?
+       Chart: Horizontal bar chart (Top 10 feature importances)
+       Insight: Key drivers of overall_score identified
+
+----------------------------------------------------------------
+
+CHAPTER 13: CLASSIFICATION MODEL
+  Content:
+  - Label Encode categorical columns
+  - Target: final_grade (A, B, C, D, F)
+  - Train-Test Split: 80/20 (random_state=42)
+  - Model: RandomForestClassifier (n_estimators=100)
+
+  Evaluation:
+  - Training Accuracy
+  - Testing Accuracy
+  - Classification Report (Precision, Recall, F1, Support)
+  - Feature Importance chart for grade prediction
+
+----------------------------------------------------------------
+
+CHAPTER 14: OVERFITTING AND UNDERFITTING
+  Content:
+  Definitions:
+  - Underfitting: Low train + Low test score
+  - Overfitting : High train + Low test score
+  - Good Fit    : High train ≈ High test score
+
+  Models Checked:
+  - Regression  (Train R2 vs Test R2)
+  - Classification (Train Accuracy vs Test Accuracy)
+
+  Chart: Bar charts comparing training vs testing performance
+         (ylim=1.2, labels above bars — no text overlap)
+
+----------------------------------------------------------------
+
+CHAPTER 15: CONCLUSION
+  Content:
+  - Dataset summary (records, columns, delete operation)
+  - EDA key insights (top study method, avg score, correlations)
+  - Regression performance (MAE, MSE, R2)
+  - Classification performance (accuracy)
+  - Final 100/100 Checklist with chapter references
+
+  Checklist (602 Data Analytics Project — 100 Marks):
+  [v] Dataset loaded correctly           (Chapter 4)
+  [v] Data types identified              (Chapter 4)
+  [v] Missing values handled             (Chapter 7)
+  [v] Univariate analysis (5+ graphs)    (Chapter 8)
+  [v] Bivariate analysis                 (Chapter 9)
+  [v] Multivariate analysis              (Chapter 10)
+  [v] Train-test split used              (Chapters 11 & 13)
+  [v] Regression model built             (Chapter 11)
+  [v] Features explained                 (Chapter 11)
+  [v] Overfitting/Underfitting explained (Chapter 14)
+  [v] MAE, MSE, R2 calculated            (Chapter 12)
+  [v] Classification model built         (Chapter 13)
+  [v] Accuracy + Report generated        (Chapter 13)
+  [v] Conclusions written                (Chapter 15)
+
+----------------------------------------------------------------
+
+CHAPTER 16: PROFESSIONAL MODEL SUMMARY REPORT
+  Content:
+  - Integrated Dashboard, Automated EDA, and ML metrics
+  - Premium styling inspired by report.html
+
+----------------------------------------------------------------
+
+CHAPTER 17: REFERENCES
+  1. Pandas Documentation
+  2. NumPy Documentation
+  3. Matplotlib Documentation
+  4. Seaborn Documentation
+  5. Scikit-learn Documentation
+  6. Sweetviz Documentation
+  7. YData Profiling Documentation
+  8. Breiman (2001) — Random Forests, Machine Learning Journal
+  9. UCI Machine Learning Repository — Student Performance Dataset
+
+================================================================
+  QUESTION SUMMARY (Q1 → Q13 in order)
+================================================================
+  Q1  — Score distribution             → Chapter 8 (Univariate)
+  Q2  — Outliers in scores             → Chapter 8 (Univariate)
+  Q3  — School type count              → Chapter 8 (Univariate)
+  Q4  — Common study method            → Chapter 8 (Univariate)
+  Q5  — Study hours vs score           → Chapter 9 (Bivariate)
+  Q6  — Attendance vs score            → Chapter 9 (Bivariate)
+  Q7  — School type vs score           → Chapter 9 (Bivariate)
+  Q8  — Parent education vs score      → Chapter 9 (Bivariate)
+  Q9  — Best study method by score     → Chapter 10 (Multivariate)
+  Q10 — Most important features        → Chapter 12 (Model Eval)
+  Q11 — Gender vs score                → Chapter 9 (Bivariate)
+  Q12 — Correlation heatmap            → Chapter 10 (Multivariate)
+  Q13 — Study hrs + Internet vs score  → Chapter 10 (Multivariate)
+================================================================

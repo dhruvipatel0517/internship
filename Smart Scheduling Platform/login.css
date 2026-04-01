@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8faff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo i {
+    color: #5865f2; /* SchedSmart Blue */
+}
+
+/* Card Styling */
+.login-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 8px;
+    /* Very light border as per UI */
+    border: 1px solid #f0f0f0;
+}
+
+h2 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+.input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-group i:first-child {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7d8bb2;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #e0e6f0;
+    border-radius: 6px;
+    background-color: #f9fbff;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.input-group input::placeholder {
+    color: #a0abbf;
+}
+
+.input-group input:focus {
+    border-color: #5865f2;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0abbf;
+    cursor: pointer;
+}
+
+/* Options Row */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.remember-me {
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.forgot-link {
+    color: #5865f2;
+    text-decoration: none;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #535ed1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-btn:hover {
+    background-color: #444db8;
+}
+
+/* Social Buttons */
+.social-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #e0e6f0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.social-btn img {
+    width: 18px;
+}
+
+.social-btn i {
+    font-size: 18px;
+}
+
+/* Divider */
+.divider {
+    margin: 25px 0;
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.divider span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 0 15px;
+    color: #999;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+/* Links and Bottom Text */
+.signup-text {
+    font-size: 13px;
+    color: #666;
+}
+
+.signup-text a {
+    color: #5865f2;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.bottom-signup {
+    margin-top: 25px;
+}
